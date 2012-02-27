@@ -8,3 +8,4 @@ def count_words string
   keys = string.downcase.scan(/\w+/).each { |key| counts[key] += 1 }
   counts
 end
+
