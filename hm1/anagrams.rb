@@ -1,8 +1,11 @@
 def combine_anagrams words
-  anagrams = Hash.new([])   
-  words.each {|word| anagrams[sort(word)] |= [word] }
+  anagrams = {}   
+  words.each do |word| 
+    anagrams[sort(word)] ||= []
+    anagrams[sort(word)].push word 
+  end
   output = []
-  anagrams.each{|k,v| output << v }
+  anagrams.each { |k,v| output << v }
   output
 end
 

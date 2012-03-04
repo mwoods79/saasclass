@@ -25,4 +25,10 @@ class TestAnagrams < Test::Unit::TestCase
     assert_equal combine_anagrams(input), output
   end
 
+ def test_can_handle_repeats
+   input = ["A", "a", "B", "b", "c", "d"]
+    output = [["A", "a"], ["B", "b"], ["c"], ["d"]]
+    assert_equal combine_anagrams(input), output
+  end
+
 end
